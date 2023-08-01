@@ -72,6 +72,7 @@ public class AnswerController {
                 answer.getQuestion().getId(), answer.getId());
     }
 
+
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/delete/{id}")
     public String answerDelete(Principal principal, @PathVariable("id") Integer id) {
